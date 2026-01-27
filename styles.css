@@ -54,7 +54,7 @@ body {
 }
 
 .foto-perfil {
-    width: 200px;
+    width: 200px; 
     height: 200px;
     object-fit: cover;
     object-position: center top; /* Foco no rosto */
@@ -65,6 +65,7 @@ body {
         0 0 30px rgba(56, 189, 248, 0.4);
     margin-bottom: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: flutuar 3s ease-in-out infinite;
 }
 
 .cabecalho h1 {
@@ -164,6 +165,8 @@ body {
     height: 100%;
     object-fit: cover;    /* corta sem distorcer */
     object-position: center;
+    /* ADICIONE A LINHA ABAIXO */
+    pointer-events: none;
 }
 
 .trabalho-descricao {
@@ -175,7 +178,7 @@ body {
 
 /* ================= CONTATO ================= */
 .contato {
-    padding: 80px 20px;
+    padding: 80px 20px;   
     background: #020617;
 }
 
@@ -193,6 +196,22 @@ body {
     gap: 20px;
 }
 
+.botao-enviar {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-enviar:hover {
+    background: #0ea5e9;
+    color: #ffffff;
+}
+ 
 .grupo-form input,
 .text-form {
     width: 100%;
@@ -230,4 +249,11 @@ body {
         font-size: 1rem;
     }
 }
-/* Ajuste para evitar sobreposição do conteúdo pelo menu fixo */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
