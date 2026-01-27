@@ -143,15 +143,27 @@ body {
     color: #38bdf8;
 }
 
+/* PADRÃO PROFISSIONAL PARA TODAS AS MÍDIAS */
 .media-wrapper {
-    margin-bottom: 10px;
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* todas com mesma proporção */
+    height: 420px;        /* força mesma altura */
+    overflow: hidden;
+    border-radius: 16px;
+    background: #000;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Imagens e vídeos sempre do mesmo tamanho */
 .trabalho-imagem,
-.media-wrapper video {
+.trabalho-item video {
     width: 100%;
-    border-radius: 10px;
-    border: 1px solid #1e293b;
+    height: 100%;
+    object-fit: cover;    /* corta sem distorcer */
+    object-position: center;
 }
 
 .trabalho-descricao {
