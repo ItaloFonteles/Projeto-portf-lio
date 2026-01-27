@@ -1,100 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <link rel="stylesheet" href="styles.css">
-              <title>Portfólio | Italo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO BÁSICO -->
+    <meta name="description" content="Portfólio de Ítalo Fonteles, técnico em hardware, software, redes e audiovisual.">
+    <meta name="keywords" content="técnico em informática, hardware, software, redes, audiovisual, TI, suporte técnico">
+    <meta name="author" content="Ítalo Fonteles">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfólio | Ítalo</title>
 </head>
 <body>
-    <nav class="navegacao">
-            <ul class="menu">
-                <li>
-                    <a href="#inicio" class="menu-link">Início</a>
-                </li>
-                <li>
-                    <a href="#sobre" class="menu-link">Sobre</a>
-                </li>
-                <li>
-                    <a href="#projetos" class="menu-link">Trabalhos</a>
-                </li>
-                <li>
-                    <a href="#contato" class="menu-link">Contato</a>
-                </li>
-            </ul>
-    </nav>   
-    
-<main id="inicio" class="cabecalho" id="inicio">
-              <img src="img/Perfil.Italo.jpg" alt="
-              italo fonteles" class="foto-perfil">
-                    <h1>Ítalo Fonteles</h1>  
-                    <p class="subtiulo" >Técnico Hardware e Software e Audiovisual</p>      
+
+<nav class="navegacao">
+    <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#projetos" class="menu-link">Trabalhos</a></li>
+        <li><a href="#contato" class="menu-link">Contato</a></li>
+    </ul>
+</nav>   
+
+<main id="inicio" class="cabecalho">
+    <img src="img/Perfil.Italo.jpg" alt="Foto de Ítalo Fonteles" class="foto-perfil">
+    <h1>Ítalo Fonteles</h1>  
+    <p class="subtitulo">Técnico Hardware, Software e Audiovisual</p>      
 </main>
 
- <section id="sobre" class="sobre">
-            <h2 class="sobre-titulo">Sobre Mim</h2>
-             <div class="sobre-caixa">
-                 <p class="sobre-paragrafo">
-                            Olá! Meu nome é Italo Fonteles, e sou técnico em Hardware e Software. Tenho experiência em manutenção de equipamentos, instalação e configuração de sistemas operacionais, além de atuar na riole e manutenção de redes de computadores. Sou apaixonado por tecnologia e estou sempre em busca de novos desafios para aprimorar minhas habilidades e conhecimentos na área de TI.
-                 </p>
-             </div>
- </section>
+<section id="sobre" class="sobre reveal">
+    <h2 class="sobre-titulo">Sobre Mim</h2>
+    <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+            Olá! Meu nome é Ítalo Fonteles, e sou técnico em Hardware e Software. 
+            Tenho experiência em manutenção de equipamentos, instalação e configuração 
+            de sistemas operacionais, além de atuar na Rioli e manutenção de redes de computadores. 
+            Sou apaixonado por tecnologia e estou sempre em busca de novos desafios para 
+            aprimorar minhas habilidades e conhecimentos na área de TI.
+        </p>
+    </div>
+</section>
 
 <section id="projetos" class="trabalho">
-              <h2 class="trabalho-titulo">Meus Trabalhos</h2>
- <div class="trabalho-caixa">
-    
-    <div class="trabalho-item">
-        <h3 class="trabalho-nome">Manutenção de PCs</h3>
-        <img src="img/Manuteçãopc.JPEG" class="trabalho-imagem">
-        <video src="img/Montagem1.MOV" class="video1" autoplay muted loop playsinline>
-              Seu navegador não suporta o elemento de vídeo.
-        </video>
-        <video src="img/biospc.mov" class="video1" autoplay muted loop playsinline>
-              Seu navegador não suporta o elemento de vídeo.
-        </video>
+    <h2 class="trabalho-titulo reveal">Meus Trabalhos</h2>
 
-        <p class="trabalho-descricao">Descrição do seu trabalho aqui.</p>
+    <div class="trabalho-caixa">
+
+        <!-- CARD 1 -->
+        <div class="trabalho-item reveal">
+            <h3 class="trabalho-nome">Manutenção de PCs</h3>
+
+            <div class="media-wrapper">
+                <img src="img/Manuteçãopc.JPEG" alt="Manutenção de PC" class="trabalho-imagem">
+            </div>
+
+            <div class="media-wrapper">
+                <video src="img/Montagem1.MOV" muted loop playsinline preload="metadata"></video>
+            </div>
+
+            <div class="media-wrapper">
+                <video src="img/biospc.mov" muted loop playsinline preload="metadata"></video>
+            </div>
+
+            <p class="trabalho-descricao">
+                Manutenção, formatação e montagem de computadores.
+            </p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="trabalho-item reveal">
+            <h3 class="trabalho-nome">Instalações em Câmaras</h3>
+
+            <div class="media-wrapper">
+                <img src="img/OutraFoto.JPEG" alt="Instalações em câmaras" class="trabalho-imagem">
+            </div>
+
+            <div class="media-wrapper">
+                <video src="img/Montagem1.MOV" muted loop playsinline preload="metadata"></video>
+            </div>
+
+            <div class="media-wrapper">
+                <video src="img/biospc.mov" muted loop playsinline preload="metadata"></video>
+            </div>
+
+            <p class="trabalho-descricao">
+                Instalação de sistemas de áudio, vídeo, câmeras e automação em câmaras municipais.
+            </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="trabalho-item reveal">
+            <h3 class="trabalho-nome">Infraestrutura e Redes</h3>
+
+            <div class="media-wrapper">
+                <img src="img/OutraFoto.JPEG" alt="Infraestrutura de rede" class="trabalho-imagem">
+            </div>
+
+            <div class="media-wrapper">
+                <video src="img/Montagem1.MOV" muted loop playsinline preload="metadata"></video>
+            </div>
+
+            <div class="media-wrapper">
+                <video src="img/biospc.mov" muted loop playsinline preload="metadata"></video>
+            </div>
+
+            <p class="trabalho-descricao">
+                Cabeamento estruturado, racks, switches e organização de infraestrutura.
+            </p>
+        </div>
+
     </div>
-
-    <div class="trabalho-item">
-        <h3 class="trabalho-nome">Instalações em Câmaras</h3>
-        <img src="img/OutraFoto.JPEG" class="trabalho-imagem">
-        <video src="img/Montagem1.MOV" class="video1" autoplay muted loop playsinline>
-              Seu navegador não suporta o elemento de vídeo.
-        </video>
-        <video src="img/biospc.mov" class="video1" autoplay muted loop playsinline>
-              Seu navegador não suporta o elemento de vídeo.
-        </video>
-
-        <p class="trabalho-descricao">Descrição do seu trabalho aqui.</p>
-    </div>
-
-    <div class="trabalho-item">
-        <h3 class="trabalho-nome">Instalações em Câmaras</h3>
-        <img src="img/OutraFoto.JPEG" class="trabalho-imagem">
-        <video src="img/Montagem1.MOV" class="video1" autoplay muted loop playsinline>
-              Seu navegador não suporta o elemento de vídeo.
-        </video>
-        <video src="img/biospc.mov" class="video1" autoplay muted loop playsinline>
-              Seu navegador não suporta o elemento de vídeo.
-        </video>
-
-        <p class="trabalho-descricao">Descrição do seu trabalho aqui.</p>
-    </div>
-
-</div>
-<section id="contato" class="contato">
-                  <h2 class="contato-titulo">Contato</h2>
-                  <form class="formulario-contato" id="formulario">
-                         <div class="grupo-form">
-                              <input type="text" placeholder="nome"></input>
-                         </div> 
-                         <div>
-                              <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
-                         </div>
-              </form>      
 </section>
+
+<section id="contato" class="contato reveal">
+    <h2 class="contato-titulo">Contato</h2>
+
+    <form class="formulario-contato" id="formulario">
+        <div class="grupo-form">
+            <input type="text" placeholder="Nome">
+        </div> 
+
+        <div class="grupo-form">
+            <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
+        </div>
+    </form>      
+</section>
+
+<!-- MODAL DE VÍDEO (TELA CHEIA) -->
+<div class="modal-video" id="modalVideo">
+    <span class="modal-close" id="closeModal">&times;</span>
+    <video id="modalPlayer" controls></video>
+</div>
+
+<!-- SCRIPTS PREMIUM -->
+<script>
+/* AUTOPLAY INTELIGENTE */
+const videos = document.querySelectorAll('video');
+
+const videoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.play();
+    } else {
+      entry.target.pause();
+    }
+  });
+}, { threshold: 0.5 });
+
+videos.forEach(video => videoObserver.observe(video));
+
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.2 });
+
+reveals.forEach(el => revealObserver.observe(el));
+
+/* MODAL DE VÍDEO */
+const modal = document.getElementById('modalVideo');
+const modalPlayer = document.getElementById('modalPlayer');
+const closeModal = document.getElementById('closeModal');
+
+document.querySelectorAll('.media-wrapper video').forEach(video => {
+  video.addEventListener('click', () => {
+    modal.classList.add('active');
+    modalPlayer.src = video.src;
+    modalPlayer.play();
+  });
+});
+
+closeModal.addEventListener('click', () => {
+  modal.classList.remove('active');
+  modalPlayer.pause();
+  modalPlayer.src = '';
+});
+</script>
 
 </body>
 </html>
