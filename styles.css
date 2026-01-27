@@ -2,17 +2,19 @@
               margin: 0;
               padding: 0;
               box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-family: 'sans-serif', Arial, Helvetica, sans-serif;
+        
 }
 
 html{
               scroll-behavior: smooth;
+              overflow-x: hidden;
 }
 
 :root{
               --primaria: #d60606;
               --secundaria: #dad2e4;
-              --escuro: #101011;
+              --escuro: #19192c;
               --claro: #fafafa;
               --maisEscuro: #02060e;
               --vidro: rgba(88, 88, 88, 0.986);    
@@ -22,7 +24,6 @@ body{
               background-color: var(--escuro);
               color: var(--claro);
 }
-
 .navegacao{
               position: fixed;
               top: 0;
@@ -50,7 +51,7 @@ body{
 .menu-link::after{
               content: '';
               height: 2px;
-              width: 100;
+              width: 0;
               position: absolute;
               bottom:0;
               left:0;
@@ -82,41 +83,37 @@ body{
 h1{
               font-size: 2.5rem;
               color:#f51010;
-              margin: 25px;
               font-weight: bold;
               margin: 20px 0; 
 }
-.sobre{
+.sobre, .trabalho{
             padding: 8rem 2rem;
             text-align: center;
 }
 .sobre-titulo{
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #f51010;
             font-weight: bold;
            
 }
 .sobre-caixa{
-            padding: 2rem;              
-            max-width: 600px;
+            padding: 2rem;           
+            max-width: 800px;
             margin: 0 auto; 
             background: var(--vidro);
             border-radius: 10px;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
 }
 .sobre-paragrafo{
-              font-size: 1.1rem;
+              font-size: 1rem;
               line-height: 1.6;
               text-align: justify;
               margin-top: 1rem;
               color: var(--claro);
 }
-.trabalho{
-            padding: 8rem 2rem;
-            text-align: center;
-}
-
 .trabalho-titulo{
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -124,36 +121,67 @@ h1{
             font-weight: bold;
 }
 .trabalho-caixa {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto; 
+    display: flex;
+    flex-wrap: wrap;         /* Permite que os itens pulem de linha se não couberem */
+    justify-content: center;  /* CENTRALIZA os itens horizontalmente */
+    align-items: flex-start;  /* Alinha os itens pelo topo */
+    gap: 2rem;               /* Espaço entre um trabalho e outro */
+    width: 100%;             /* Garante que ocupe a tela toda */
+    max-width: 1200px;       /* Limita para não ficar largo demais em monitores grandes */
+    margin: 0 auto;          /* Centraliza a caixa inteira na página */
+    padding: 20px;
 }
-.trabalho-item{
-            margin-bottom: 2rem;
-            text-align: left;
+
+/* Container de cada projeto */
+.trabalho-item {
+    background: rgba(255, 255, 255, 0.05); /* Fundo levemente transparente */
+    backdrop-filter: blur(10px);           /* Efeito de vidro fosco */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.trabalho-nome{ 
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
+
+/* Efeito ao passar o mouse no card todo */
+.trabalho-item:hover {
+    transform: translateY(-10px); /* O card sobe levemente */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--primaria); /* Brilho na borda com sua cor principal */
 }
-.trabalho-imagem{
-            width: 100%;
-            border-radius: 20px;
-            margin-top: 1rem;
+
+/* Ajuste das mídias (Imagens e Vídeos) */
+.trabalho-imagem, 
+.video1, 
+.video2 {
+    width: 100%;
+    height: 350px;         /* Altura elegante */
+
+    /* O SEGREDO: SEM ZOOM E SEM ESPAÇOS VAZIOS */
+    object-fit: contain;   /* Mostra tudo sem cortar */
+    background-color: #000; /* Fundo preto estilo 'cinema' */
+    
+    border-radius: 16px;
+    margin: 1rem 0;
+    transition: all 0.4s ease;
+    filter: brightness(0.9); /* Um pouco mais escuro por padrão */
 }
-.video1, .video2{   
-            width: 100%;
-            border-radius: 20px;        
-            margin-top: 1rem; 
-            margin-bottom: 2rem;
-}   
-.trabalho-descricao{
-            margin-top: 0.5rem;
-            font-size: 1rem;
-            line-height: 1.5;
-            color: var(--claro);
+
+/* Destaque na mídia ao passar o mouse */
+.trabalho-item:hover .trabalho-imagem,
+.trabalho-item:hover video {
+    filter: brightness(1.1); /* Acende a imagem/vídeo no hover */
+    transform: scale(1.02);  /* Um zoom bem sutil, só para dar vida */
+}
+
+/* Título do Trabalho */
+.trabalho-nome {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
 }
