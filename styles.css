@@ -1,0 +1,159 @@
+*{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+              scroll-behavior: smooth;
+}
+
+:root{
+              --primaria: #d60606;
+              --secundaria: #dad2e4;
+              --escuro: #101011;
+              --claro: #fafafa;
+              --maisEscuro: #02060e;
+              --vidro: rgba(88, 88, 88, 0.986);    
+}
+
+body{
+              background-color: var(--escuro);
+              color: var(--claro);
+}
+
+.navegacao{
+              position: fixed;
+              top: 0;
+              background: rgba(14, 22, 41, 0.8);
+              width: 100%;
+              z-index: 100;
+              padding: 1.5rem 0;
+}
+
+.menu{
+              display: flex;
+              justify-content: center;
+              list-style: none;
+              gap: 3rem;   
+}
+.menu-link{
+              text-decoration: none;
+              color: var(--claro);
+              font-size: 1.2rem;
+              transition: color 0.3s;
+              position: relative;
+              padding: 0.5rem 0;
+}
+
+.menu-link::after{
+              content: '';
+              height: 2px;
+              width: 100;
+              position: absolute;
+              bottom:0;
+              left:0;
+              background:linear-gradient(90deg, var(--primaria),var(--secundaria));
+              transition: width 0.5s;
+              width: 0;
+}
+.menu-link:hover::after{
+              width: 100%;
+}
+.cabecalho{
+              min-height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+} 
+.foto-perfil{
+    width: 250px;           /* Tamanho fixo para harmonia */
+    height: 250px;
+    object-fit: cover;      /* Centraliza o rosto sem esticar a foto */
+    object-position: top;   /* Garante que o foco seja no seu rosto */
+    border-radius: 50%;     /* Deixa a foto redonda */
+    border: 4px solid var(--primaria); /* Usa sua variável de cor */
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3); /* Sombra suave para destaque */
+    display: block;
+    margin: 20px auto;      /* Centraliza na tela */
+}
+h1{
+              font-size: 2.5rem;
+              color:#f51010;
+              margin: 25px;
+              font-weight: bold;
+              margin: 20px 0; 
+}
+.sobre{
+            padding: 8rem 2rem;
+            text-align: center;
+}
+.sobre-titulo{
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #f51010;
+            font-weight: bold;
+           
+}
+.sobre-caixa{
+            padding: 2rem;              
+            max-width: 600px;
+            margin: 0 auto; 
+            background: var(--vidro);
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
+}
+.sobre-paragrafo{
+              font-size: 1.1rem;
+              line-height: 1.6;
+              text-align: justify;
+              margin-top: 1rem;
+              color: var(--claro);
+}
+.trabalho{
+            padding: 8rem 2rem;
+            text-align: center;
+}
+
+.trabalho-titulo{
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #f51010;
+            font-weight: bold;
+}
+.trabalho-caixa {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto; 
+}
+.trabalho-item{
+            margin-bottom: 2rem;
+            text-align: left;
+}
+.trabalho-nome{ 
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+}
+.trabalho-imagem{
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 1rem;
+}
+.video1, .video2{   
+            width: 100%;
+            border-radius: 20px;        
+            margin-top: 1rem; 
+            margin-bottom: 2rem;
+}   
+.trabalho-descricao{
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--claro);
+}
