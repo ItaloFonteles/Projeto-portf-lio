@@ -117,13 +117,13 @@
 <section id="contato" class="contato reveal">
     <h2 class="contato-titulo">Contato</h2>
 
-    <form class="formulario-contato" id="formulario">
+    <form class="formulario-contato" id="formulario" onsubmit="enviarwhatsapp(event)">
         <div class="grupo-form">
-            <input type="text" placeholder="Nome">
+            <input type="text" placeholder="Nome" id="nome">
         </div> 
 
         <div class="grupo-form">
-            <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
+            <textarea class="text-form" placeholder="Digite sua mensagem" id="mensagem"></textarea>
         </div>
         <button type="submit" class="botao-enviar">Enviar Whatsapp</button>
     </form>      
@@ -183,7 +183,23 @@ closeModal.addEventListener('click', () => {
   modalPlayer.pause();
   modalPlayer.src = '';
 });
-</script>
+//* FORMULÁRIO DE CONTATO VIA WHATSAPP */
+function enviarwhatsapp(event) {
+    event.preventDefault(); // Evita o recarregamento da página
 
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value; // Adicionado .value aqui
+    const contato = '5595991618031'; 
+
+    // Cria a mensagem amigável
+    const texto = `Olá Italo! Meu nome é ${nome}. ${mensagem}`;
+    const msgformatada = encodeURIComponent(texto);
+
+    // URL oficial do WhatsApp (funciona em qualquer aparelho)
+    const url = `https://api.whatsapp.com/send?phone=${contato}&text=${msgformatada}`;
+
+    window.open(url, '_blank');
+} // Removido o ); que estava sobrando
+</script>
 </body>
 </html>
