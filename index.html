@@ -156,19 +156,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 reveals.forEach(el => revealObserver.observe(el));
 
-/* MODAL DE VÍDEO */
-const modal = document.getElementById('modalVideo');
-const modalPlayer = document.getElementById('modalPlayer');
-const closeModal = document.getElementById('closeModal');
-
-document.querySelectorAll('.media-wrapper video').forEach(video => {
-  video.addEventListener('click', () => {
-    modal.classList.add('active');
-    modalPlayer.src = video.src;
-    modalPlayer.play();
-  });
-});
-
 closeModal.addEventListener('click', () => {
   modal.classList.remove('active');
   modalPlayer.pause();
